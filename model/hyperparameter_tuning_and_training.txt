@@ -1,0 +1,643 @@
+2024-07-04 22:31:50.317040: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-04 22:31:50.317248: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-04 22:31:50.451633: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-04 22:31:50.735343: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-04 22:31:59.660797: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.848543: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.849043: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.852720: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.853198: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.853597: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.911166: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.911262: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.911355: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-07-04 22:31:59.911414: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22435 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:01:00.0, compute capability: 8.6
+train: 9905
+val: 652
+test: 518
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/xception/xception_weights_tf_dim_ordering_tf_kernels_notop.h5
+83683744/83683744 [==============================] - 8s 0us/step
+
+Search: Running Trial #1
+
+Value             |Best Value So Far |Hyperparameter
+400               |400               |dense_1
+0.0039461         |0.0039461         |learning_rate
+0.90266           |0.90266           |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+2024-07-04 22:32:16.910123: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8906
+2024-07-04 22:32:21.378530: I external/local_xla/xla/service/service.cc:168] XLA service 0x7fa97dd5f950 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-07-04 22:32:21.378564: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA GeForce RTX 3090, Compute Capability 8.6
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1720132341.445585      89 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+4952/4952 [==============================] - 1743s 348ms/step - loss: 0.4081 - accuracy: 0.8020 - auc: 0.8940 - val_loss: 0.4895 - val_accuracy: 0.7914 - val_auc: 0.9035
+Epoch 2/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.1554 - accuracy: 0.9422 - auc: 0.9846 - val_loss: 0.2167 - val_accuracy: 0.9034 - val_auc: 0.9732
+Epoch 3/7
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0764 - accuracy: 0.9720 - auc: 0.9958 - val_loss: 0.3913 - val_accuracy: 0.8926 - val_auc: 0.9455
+Epoch 4/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0459 - accuracy: 0.9865 - auc: 0.9973 - val_loss: 0.2322 - val_accuracy: 0.9034 - val_auc: 0.9687
+Epoch 5/7
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.0410 - accuracy: 0.9850 - auc: 0.9981 - val_loss: 0.2294 - val_accuracy: 0.9003 - val_auc: 0.9685
+
+Trial 1 Complete [02h 23m 23s]
+val_loss: 0.2166663557291031
+
+Best val_loss So Far: 0.2166663557291031
+Total elapsed time: 02h 23m 23s
+
+Search: Running Trial #2
+
+Value             |Best Value So Far |Hyperparameter
+320               |400               |dense_1
+0.0042171         |0.0039461         |learning_rate
+0.89964           |0.90266           |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1735s 349ms/step - loss: 0.3940 - accuracy: 0.8083 - auc: 0.9013 - val_loss: 0.2253 - val_accuracy: 0.9156 - val_auc: 0.9684
+Epoch 2/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.1348 - accuracy: 0.9506 - auc: 0.9879 - val_loss: 0.3300 - val_accuracy: 0.8865 - val_auc: 0.9532
+Epoch 3/7
+4952/4952 [==============================] - 1725s 348ms/step - loss: 0.0680 - accuracy: 0.9775 - auc: 0.9963 - val_loss: 0.1429 - val_accuracy: 0.9463 - val_auc: 0.9869
+Epoch 4/7
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.0454 - accuracy: 0.9847 - auc: 0.9983 - val_loss: 0.3908 - val_accuracy: 0.8773 - val_auc: 0.9491
+Epoch 5/7
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0401 - accuracy: 0.9860 - auc: 0.9981 - val_loss: 0.3072 - val_accuracy: 0.9095 - val_auc: 0.9587
+Epoch 6/7
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0250 - accuracy: 0.9927 - auc: 0.9988 - val_loss: 0.1735 - val_accuracy: 0.9525 - val_auc: 0.9829
+
+Trial 2 Complete [02h 51m 44s]
+val_loss: 0.142879918217659
+
+Best val_loss So Far: 0.142879918217659
+Total elapsed time: 05h 15m 07s
+
+Search: Running Trial #3
+
+Value             |Best Value So Far |Hyperparameter
+256               |320               |dense_1
+0.0015898         |0.0042171         |learning_rate
+0.8726            |0.89964           |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1734s 349ms/step - loss: 0.3504 - accuracy: 0.8393 - auc: 0.9235 - val_loss: 0.2771 - val_accuracy: 0.9003 - val_auc: 0.9623
+Epoch 2/7
+4952/4952 [==============================] - 1726s 348ms/step - loss: 0.1113 - accuracy: 0.9603 - auc: 0.9916 - val_loss: 0.1708 - val_accuracy: 0.9371 - val_auc: 0.9845
+Epoch 3/7
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.0587 - accuracy: 0.9798 - auc: 0.9971 - val_loss: 0.1987 - val_accuracy: 0.9294 - val_auc: 0.9820
+Epoch 4/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0321 - accuracy: 0.9898 - auc: 0.9987 - val_loss: 0.1347 - val_accuracy: 0.9494 - val_auc: 0.9900
+Epoch 5/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0174 - accuracy: 0.9935 - auc: 0.9997 - val_loss: 0.2129 - val_accuracy: 0.9417 - val_auc: 0.9770
+Epoch 6/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0186 - accuracy: 0.9942 - auc: 0.9992 - val_loss: 0.1645 - val_accuracy: 0.9509 - val_auc: 0.9868
+Epoch 7/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0129 - accuracy: 0.9964 - auc: 0.9997 - val_loss: 0.1437 - val_accuracy: 0.9540 - val_auc: 0.9894
+
+Trial 3 Complete [03h 20m 34s]
+val_loss: 0.13469016551971436
+
+Best val_loss So Far: 0.13469016551971436
+Total elapsed time: 08h 35m 41s
+
+Search: Running Trial #4
+
+Value             |Best Value So Far |Hyperparameter
+336               |256               |dense_1
+0.00055241        |0.0015898         |learning_rate
+0.89115           |0.8726            |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1737s 349ms/step - loss: 0.3922 - accuracy: 0.8089 - auc: 0.9018 - val_loss: 0.1895 - val_accuracy: 0.9248 - val_auc: 0.9782
+Epoch 2/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.1166 - accuracy: 0.9586 - auc: 0.9905 - val_loss: 0.3509 - val_accuracy: 0.8666 - val_auc: 0.9489
+Epoch 3/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0495 - accuracy: 0.9831 - auc: 0.9979 - val_loss: 0.1622 - val_accuracy: 0.9433 - val_auc: 0.9859
+Epoch 4/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0346 - accuracy: 0.9888 - auc: 0.9992 - val_loss: 0.1740 - val_accuracy: 0.9387 - val_auc: 0.9822
+Epoch 5/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0205 - accuracy: 0.9931 - auc: 0.9995 - val_loss: 0.1672 - val_accuracy: 0.9494 - val_auc: 0.9845
+Epoch 6/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.0155 - accuracy: 0.9947 - auc: 0.9997 - val_loss: 0.1484 - val_accuracy: 0.9571 - val_auc: 0.9881
+Epoch 7/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0152 - accuracy: 0.9952 - auc: 0.9996 - val_loss: 0.2225 - val_accuracy: 0.9325 - val_auc: 0.9779
+
+Trial 4 Complete [03h 20m 41s]
+val_loss: 0.14840400218963623
+
+Best val_loss So Far: 0.13469016551971436
+Total elapsed time: 11h 56m 22s
+
+Search: Running Trial #5
+
+Value             |Best Value So Far |Hyperparameter
+400               |256               |dense_1
+0.00016684        |0.0015898         |learning_rate
+0.90925           |0.8726            |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1736s 349ms/step - loss: 0.5404 - accuracy: 0.7081 - auc: 0.7956 - val_loss: 0.3208 - val_accuracy: 0.8727 - val_auc: 0.9420
+Epoch 2/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.2152 - accuracy: 0.9160 - auc: 0.9729 - val_loss: 0.1738 - val_accuracy: 0.9279 - val_auc: 0.9833
+Epoch 3/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0849 - accuracy: 0.9712 - auc: 0.9952 - val_loss: 0.1611 - val_accuracy: 0.9371 - val_auc: 0.9835
+Epoch 4/7
+4952/4952 [==============================] - 1729s 349ms/step - loss: 0.0482 - accuracy: 0.9835 - auc: 0.9983 - val_loss: 0.1565 - val_accuracy: 0.9463 - val_auc: 0.9863
+Epoch 5/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0326 - accuracy: 0.9883 - auc: 0.9991 - val_loss: 0.1836 - val_accuracy: 0.9433 - val_auc: 0.9823
+Epoch 6/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0193 - accuracy: 0.9942 - auc: 0.9994 - val_loss: 0.2326 - val_accuracy: 0.9371 - val_auc: 0.9710
+Epoch 7/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0147 - accuracy: 0.9950 - auc: 0.9997 - val_loss: 0.1354 - val_accuracy: 0.9509 - val_auc: 0.9907
+
+Trial 5 Complete [03h 21m 12s]
+val_loss: 0.13537286221981049
+
+Best val_loss So Far: 0.13469016551971436
+Total elapsed time: 15h 17m 33s
+
+Search: Running Trial #6
+
+Value             |Best Value So Far |Hyperparameter
+336               |256               |dense_1
+0.00010677        |0.0015898         |learning_rate
+0.88932           |0.8726            |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1738s 349ms/step - loss: 0.6276 - accuracy: 0.6395 - auc: 0.7024 - val_loss: 0.4227 - val_accuracy: 0.8160 - val_auc: 0.8970
+Epoch 2/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.4324 - accuracy: 0.7921 - auc: 0.8836 - val_loss: 0.2719 - val_accuracy: 0.8896 - val_auc: 0.9615
+Epoch 3/7
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.2095 - accuracy: 0.9200 - auc: 0.9752 - val_loss: 0.2843 - val_accuracy: 0.8880 - val_auc: 0.9541
+Epoch 4/7
+4952/4952 [==============================] - 1725s 348ms/step - loss: 0.1067 - accuracy: 0.9614 - auc: 0.9932 - val_loss: 0.2388 - val_accuracy: 0.9049 - val_auc: 0.9706
+Epoch 5/7
+4952/4952 [==============================] - 1725s 348ms/step - loss: 0.0558 - accuracy: 0.9820 - auc: 0.9982 - val_loss: 0.2349 - val_accuracy: 0.9248 - val_auc: 0.9722
+Epoch 6/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0406 - accuracy: 0.9871 - auc: 0.9989 - val_loss: 0.1859 - val_accuracy: 0.9402 - val_auc: 0.9803
+Epoch 7/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0311 - accuracy: 0.9889 - auc: 0.9993 - val_loss: 0.2840 - val_accuracy: 0.9172 - val_auc: 0.9661
+
+Trial 6 Complete [03h 21m 05s]
+val_loss: 0.18592996895313263
+
+Best val_loss So Far: 0.13469016551971436
+Total elapsed time: 18h 38m 38s
+
+Search: Running Trial #7
+
+Value             |Best Value So Far |Hyperparameter
+336               |256               |dense_1
+0.00011177        |0.0015898         |learning_rate
+0.8766            |0.8726            |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1738s 349ms/step - loss: 0.6039 - accuracy: 0.6591 - auc: 0.7326 - val_loss: 0.4421 - val_accuracy: 0.7853 - val_auc: 0.8765
+Epoch 2/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.3877 - accuracy: 0.8289 - auc: 0.9093 - val_loss: 0.2951 - val_accuracy: 0.8727 - val_auc: 0.9511
+Epoch 3/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.1799 - accuracy: 0.9305 - auc: 0.9819 - val_loss: 0.2920 - val_accuracy: 0.8681 - val_auc: 0.9531
+Epoch 4/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.0886 - accuracy: 0.9715 - auc: 0.9950 - val_loss: 0.2243 - val_accuracy: 0.9049 - val_auc: 0.9749
+Epoch 5/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.0536 - accuracy: 0.9824 - auc: 0.9982 - val_loss: 0.2081 - val_accuracy: 0.9248 - val_auc: 0.9785
+Epoch 6/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0316 - accuracy: 0.9900 - auc: 0.9992 - val_loss: 0.2901 - val_accuracy: 0.9110 - val_auc: 0.9623
+Epoch 7/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0245 - accuracy: 0.9920 - auc: 0.9996 - val_loss: 0.3788 - val_accuracy: 0.8865 - val_auc: 0.9487
+
+Trial 7 Complete [03h 21m 11s]
+val_loss: 0.20811167359352112
+
+Best val_loss So Far: 0.13469016551971436
+Total elapsed time: 21h 59m 49s
+
+Search: Running Trial #8
+
+Value             |Best Value So Far |Hyperparameter
+400               |256               |dense_1
+0.00022881        |0.0015898         |learning_rate
+0.9185            |0.8726            |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1738s 350ms/step - loss: 0.4580 - accuracy: 0.7688 - auc: 0.8620 - val_loss: 0.2782 - val_accuracy: 0.8896 - val_auc: 0.9541
+Epoch 2/7
+4952/4952 [==============================] - 1714s 346ms/step - loss: 0.1572 - accuracy: 0.9423 - auc: 0.9843 - val_loss: 0.2847 - val_accuracy: 0.8911 - val_auc: 0.9624
+Epoch 3/7
+4952/4952 [==============================] - 1729s 349ms/step - loss: 0.0663 - accuracy: 0.9762 - auc: 0.9971 - val_loss: 0.1449 - val_accuracy: 0.9479 - val_auc: 0.9875
+Epoch 4/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0420 - accuracy: 0.9865 - auc: 0.9985 - val_loss: 0.2388 - val_accuracy: 0.9264 - val_auc: 0.9729
+Epoch 5/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.0314 - accuracy: 0.9898 - auc: 0.9992 - val_loss: 0.1372 - val_accuracy: 0.9540 - val_auc: 0.9887
+Epoch 6/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0248 - accuracy: 0.9919 - auc: 0.9994 - val_loss: 0.1651 - val_accuracy: 0.9387 - val_auc: 0.9842
+Epoch 7/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0177 - accuracy: 0.9944 - auc: 0.9995 - val_loss: 0.1743 - val_accuracy: 0.9479 - val_auc: 0.9829
+
+Trial 8 Complete [03h 20m 49s]
+val_loss: 0.13715338706970215
+
+Best val_loss So Far: 0.13469016551971436
+Total elapsed time: 1d 01h 20m 38s
+
+Search: Running Trial #9
+
+Value             |Best Value So Far |Hyperparameter
+400               |256               |dense_1
+0.00020048        |0.0015898         |learning_rate
+0.88658           |0.8726            |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1738s 349ms/step - loss: 0.5623 - accuracy: 0.6936 - auc: 0.7747 - val_loss: 0.3946 - val_accuracy: 0.8129 - val_auc: 0.9050
+Epoch 2/7
+4952/4952 [==============================] - 1729s 349ms/step - loss: 0.2622 - accuracy: 0.8938 - auc: 0.9596 - val_loss: 0.2227 - val_accuracy: 0.9034 - val_auc: 0.9696
+Epoch 3/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.1004 - accuracy: 0.9654 - auc: 0.9932 - val_loss: 0.3069 - val_accuracy: 0.8834 - val_auc: 0.9554
+Epoch 4/7
+4952/4952 [==============================] - 1729s 349ms/step - loss: 0.0566 - accuracy: 0.9803 - auc: 0.9976 - val_loss: 0.1544 - val_accuracy: 0.9433 - val_auc: 0.9870
+Epoch 5/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0349 - accuracy: 0.9884 - auc: 0.9989 - val_loss: 0.1630 - val_accuracy: 0.9371 - val_auc: 0.9864
+Epoch 6/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0269 - accuracy: 0.9906 - auc: 0.9992 - val_loss: 0.2957 - val_accuracy: 0.9126 - val_auc: 0.9678
+Epoch 7/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0178 - accuracy: 0.9943 - auc: 0.9998 - val_loss: 0.1251 - val_accuracy: 0.9617 - val_auc: 0.9892
+
+Trial 9 Complete [03h 21m 04s]
+val_loss: 0.12506216764450073
+
+Best val_loss So Far: 0.12506216764450073
+Total elapsed time: 1d 04h 41m 41s
+
+Search: Running Trial #10
+
+Value             |Best Value So Far |Hyperparameter
+304               |400               |dense_1
+0.001335          |0.00020048        |learning_rate
+0.9119            |0.88658           |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1738s 349ms/step - loss: 0.3594 - accuracy: 0.8301 - auc: 0.9190 - val_loss: 0.2631 - val_accuracy: 0.9034 - val_auc: 0.9653
+Epoch 2/7
+4952/4952 [==============================] - 1729s 349ms/step - loss: 0.1066 - accuracy: 0.9612 - auc: 0.9925 - val_loss: 0.1763 - val_accuracy: 0.9356 - val_auc: 0.9806
+Epoch 3/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0627 - accuracy: 0.9779 - auc: 0.9969 - val_loss: 0.2392 - val_accuracy: 0.9279 - val_auc: 0.9686
+Epoch 4/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.0330 - accuracy: 0.9881 - auc: 0.9989 - val_loss: 0.1665 - val_accuracy: 0.9310 - val_auc: 0.9853
+Epoch 5/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0302 - accuracy: 0.9911 - auc: 0.9986 - val_loss: 0.1900 - val_accuracy: 0.9371 - val_auc: 0.9808
+Epoch 6/7
+4952/4952 [==============================] - 1729s 349ms/step - loss: 0.0215 - accuracy: 0.9931 - auc: 0.9994 - val_loss: 0.1475 - val_accuracy: 0.9525 - val_auc: 0.9897
+Epoch 7/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0153 - accuracy: 0.9951 - auc: 0.9996 - val_loss: 0.2651 - val_accuracy: 0.9264 - val_auc: 0.9684
+
+Trial 10 Complete [03h 21m 01s]
+val_loss: 0.1475314050912857
+
+Best val_loss So Far: 0.12506216764450073
+Total elapsed time: 1d 08h 02m 42s
+
+Search: Running Trial #11
+
+Value             |Best Value So Far |Hyperparameter
+256               |400               |dense_1
+0.0065517         |0.00020048        |learning_rate
+0.87794           |0.88658           |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1738s 349ms/step - loss: 0.4125 - accuracy: 0.8042 - auc: 0.8920 - val_loss: 0.4675 - val_accuracy: 0.7439 - val_auc: 0.8693
+Epoch 2/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.1653 - accuracy: 0.9368 - auc: 0.9825 - val_loss: 0.1970 - val_accuracy: 0.9049 - val_auc: 0.9777
+Epoch 3/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0900 - accuracy: 0.9675 - auc: 0.9943 - val_loss: 0.1827 - val_accuracy: 0.9371 - val_auc: 0.9790
+Epoch 4/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0555 - accuracy: 0.9794 - auc: 0.9977 - val_loss: 0.2529 - val_accuracy: 0.9264 - val_auc: 0.9707
+Epoch 5/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.0503 - accuracy: 0.9831 - auc: 0.9980 - val_loss: 0.1453 - val_accuracy: 0.9494 - val_auc: 0.9876
+Epoch 6/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0321 - accuracy: 0.9894 - auc: 0.9989 - val_loss: 0.2647 - val_accuracy: 0.9126 - val_auc: 0.9671
+Epoch 7/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0201 - accuracy: 0.9922 - auc: 0.9996 - val_loss: 0.2257 - val_accuracy: 0.9494 - val_auc: 0.9778
+
+Trial 11 Complete [03h 20m 57s]
+val_loss: 0.14527219533920288
+
+Best val_loss So Far: 0.12506216764450073
+Total elapsed time: 1d 11h 23m 39s
+
+Search: Running Trial #12
+
+Value             |Best Value So Far |Hyperparameter
+384               |400               |dense_1
+0.00031214        |0.00020048        |learning_rate
+0.88605           |0.88658           |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1737s 349ms/step - loss: 0.4705 - accuracy: 0.7579 - auc: 0.8527 - val_loss: 0.2241 - val_accuracy: 0.8957 - val_auc: 0.9722
+Epoch 2/7
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.1528 - accuracy: 0.9426 - auc: 0.9855 - val_loss: 0.2469 - val_accuracy: 0.9034 - val_auc: 0.9661
+Epoch 3/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.0601 - accuracy: 0.9792 - auc: 0.9975 - val_loss: 0.1687 - val_accuracy: 0.9402 - val_auc: 0.9829
+Epoch 4/7
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0365 - accuracy: 0.9878 - auc: 0.9987 - val_loss: 0.1768 - val_accuracy: 0.9402 - val_auc: 0.9833
+Epoch 5/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0255 - accuracy: 0.9906 - auc: 0.9995 - val_loss: 0.1673 - val_accuracy: 0.9509 - val_auc: 0.9854
+Epoch 6/7
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.0182 - accuracy: 0.9935 - auc: 0.9997 - val_loss: 0.3386 - val_accuracy: 0.8988 - val_auc: 0.9624
+Epoch 7/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0108 - accuracy: 0.9965 - auc: 0.9999 - val_loss: 0.2976 - val_accuracy: 0.9218 - val_auc: 0.9664
+/usr/local/lib/python3.11/dist-packages/sklearn/gaussian_process/kernels.py:445: ConvergenceWarning: The optimal value found for dimension 0 of parameter length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+
+Trial 12 Complete [03h 20m 35s]
+val_loss: 0.16732408106327057
+
+Best val_loss So Far: 0.12506216764450073
+Total elapsed time: 1d 14h 44m 14s
+
+Search: Running Trial #13
+
+Value             |Best Value So Far |Hyperparameter
+336               |400               |dense_1
+0.0051311         |0.00020048        |learning_rate
+0.91878           |0.88658           |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1736s 349ms/step - loss: 0.3946 - accuracy: 0.8128 - auc: 0.9019 - val_loss: 0.2480 - val_accuracy: 0.8926 - val_auc: 0.9644
+Epoch 2/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.1483 - accuracy: 0.9455 - auc: 0.9858 - val_loss: 0.3109 - val_accuracy: 0.8911 - val_auc: 0.9570
+Epoch 3/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0904 - accuracy: 0.9671 - auc: 0.9943 - val_loss: 0.2155 - val_accuracy: 0.9325 - val_auc: 0.9741
+Epoch 4/7
+4952/4952 [==============================] - 1725s 348ms/step - loss: 0.0555 - accuracy: 0.9817 - auc: 0.9974 - val_loss: 0.1397 - val_accuracy: 0.9571 - val_auc: 0.9892
+Epoch 5/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0363 - accuracy: 0.9854 - auc: 0.9988 - val_loss: 0.1395 - val_accuracy: 0.9586 - val_auc: 0.9894
+Epoch 6/7
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.0320 - accuracy: 0.9886 - auc: 0.9990 - val_loss: 0.2980 - val_accuracy: 0.9126 - val_auc: 0.9675
+Epoch 7/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0237 - accuracy: 0.9911 - auc: 0.9994 - val_loss: 0.1656 - val_accuracy: 0.9525 - val_auc: 0.9828
+/usr/local/lib/python3.11/dist-packages/sklearn/gaussian_process/kernels.py:445: ConvergenceWarning: The optimal value found for dimension 0 of parameter length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+
+Trial 13 Complete [03h 20m 51s]
+val_loss: 0.13953876495361328
+
+Best val_loss So Far: 0.12506216764450073
+Total elapsed time: 1d 18h 05m 04s
+
+Search: Running Trial #14
+
+Value             |Best Value So Far |Hyperparameter
+400               |400               |dense_1
+0.0014767         |0.00020048        |learning_rate
+0.87364           |0.88658           |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1737s 349ms/step - loss: 0.3651 - accuracy: 0.8335 - auc: 0.9168 - val_loss: 0.2500 - val_accuracy: 0.9034 - val_auc: 0.9729
+Epoch 2/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.1173 - accuracy: 0.9587 - auc: 0.9908 - val_loss: 0.1991 - val_accuracy: 0.9187 - val_auc: 0.9782
+Epoch 3/7
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0642 - accuracy: 0.9782 - auc: 0.9969 - val_loss: 0.2571 - val_accuracy: 0.9126 - val_auc: 0.9724
+Epoch 4/7
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.0364 - accuracy: 0.9873 - auc: 0.9988 - val_loss: 0.4585 - val_accuracy: 0.8758 - val_auc: 0.9377
+Epoch 5/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0253 - accuracy: 0.9915 - auc: 0.9991 - val_loss: 0.4654 - val_accuracy: 0.8788 - val_auc: 0.9424
+/usr/local/lib/python3.11/dist-packages/sklearn/gaussian_process/kernels.py:445: ConvergenceWarning: The optimal value found for dimension 0 of parameter length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+
+Trial 14 Complete [02h 23m 18s]
+val_loss: 0.19905517995357513
+
+Best val_loss So Far: 0.12506216764450073
+Total elapsed time: 1d 20h 28m 22s
+
+Search: Running Trial #15
+
+Value             |Best Value So Far |Hyperparameter
+368               |400               |dense_1
+0.0027519         |0.00020048        |learning_rate
+0.87727           |0.88658           |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1736s 349ms/step - loss: 0.3608 - accuracy: 0.8311 - auc: 0.9186 - val_loss: 0.1949 - val_accuracy: 0.9187 - val_auc: 0.9761
+Epoch 2/7
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.1234 - accuracy: 0.9522 - auc: 0.9901 - val_loss: 0.2102 - val_accuracy: 0.9187 - val_auc: 0.9763
+Epoch 3/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0633 - accuracy: 0.9784 - auc: 0.9967 - val_loss: 0.2474 - val_accuracy: 0.9202 - val_auc: 0.9639
+Epoch 4/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.0382 - accuracy: 0.9869 - auc: 0.9985 - val_loss: 0.1691 - val_accuracy: 0.9463 - val_auc: 0.9856
+Epoch 5/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.0281 - accuracy: 0.9901 - auc: 0.9992 - val_loss: 0.1190 - val_accuracy: 0.9617 - val_auc: 0.9904
+Epoch 6/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0255 - accuracy: 0.9912 - auc: 0.9992 - val_loss: 0.1772 - val_accuracy: 0.9448 - val_auc: 0.9825
+Epoch 7/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0152 - accuracy: 0.9951 - auc: 0.9996 - val_loss: 0.1716 - val_accuracy: 0.9509 - val_auc: 0.9821
+/usr/local/lib/python3.11/dist-packages/sklearn/gaussian_process/kernels.py:445: ConvergenceWarning: The optimal value found for dimension 0 of parameter length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+
+Trial 15 Complete [03h 20m 36s]
+val_loss: 0.1189505085349083
+
+Best val_loss So Far: 0.1189505085349083
+Total elapsed time: 1d 23h 48m 58s
+
+Search: Running Trial #16
+
+Value             |Best Value So Far |Hyperparameter
+320               |368               |dense_1
+0.0005894         |0.0027519         |learning_rate
+0.91065           |0.87727           |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1737s 349ms/step - loss: 0.3968 - accuracy: 0.8053 - auc: 0.8988 - val_loss: 0.2756 - val_accuracy: 0.8896 - val_auc: 0.9541
+Epoch 2/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.1058 - accuracy: 0.9621 - auc: 0.9924 - val_loss: 0.1853 - val_accuracy: 0.9294 - val_auc: 0.9804
+Epoch 3/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0577 - accuracy: 0.9801 - auc: 0.9972 - val_loss: 0.2528 - val_accuracy: 0.9126 - val_auc: 0.9722
+Epoch 4/7
+4952/4952 [==============================] - 1726s 348ms/step - loss: 0.0368 - accuracy: 0.9882 - auc: 0.9988 - val_loss: 0.1389 - val_accuracy: 0.9494 - val_auc: 0.9908
+Epoch 5/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0185 - accuracy: 0.9936 - auc: 0.9996 - val_loss: 0.1892 - val_accuracy: 0.9279 - val_auc: 0.9805
+Epoch 6/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0196 - accuracy: 0.9929 - auc: 0.9996 - val_loss: 0.3364 - val_accuracy: 0.9064 - val_auc: 0.9621
+Epoch 7/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0196 - accuracy: 0.9940 - auc: 0.9991 - val_loss: 0.2081 - val_accuracy: 0.9340 - val_auc: 0.9809
+/usr/local/lib/python3.11/dist-packages/sklearn/gaussian_process/kernels.py:445: ConvergenceWarning: The optimal value found for dimension 0 of parameter length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+
+Trial 16 Complete [03h 20m 38s]
+val_loss: 0.1389094889163971
+
+Best val_loss So Far: 0.1189505085349083
+Total elapsed time: 2d 03h 09m 36s
+
+Search: Running Trial #17
+
+Value             |Best Value So Far |Hyperparameter
+304               |368               |dense_1
+0.00071031        |0.0027519         |learning_rate
+0.91439           |0.87727           |momentum
+False             |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1737s 349ms/step - loss: 0.3773 - accuracy: 0.8215 - auc: 0.9107 - val_loss: 0.2343 - val_accuracy: 0.9034 - val_auc: 0.9692
+Epoch 2/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.1189 - accuracy: 0.9578 - auc: 0.9904 - val_loss: 0.1209 - val_accuracy: 0.9601 - val_auc: 0.9912
+Epoch 3/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0588 - accuracy: 0.9786 - auc: 0.9975 - val_loss: 0.1295 - val_accuracy: 0.9509 - val_auc: 0.9899
+Epoch 4/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0319 - accuracy: 0.9883 - auc: 0.9991 - val_loss: 0.1611 - val_accuracy: 0.9494 - val_auc: 0.9871
+Epoch 5/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0243 - accuracy: 0.9916 - auc: 0.9995 - val_loss: 0.1020 - val_accuracy: 0.9693 - val_auc: 0.9938
+Epoch 6/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.0205 - accuracy: 0.9930 - auc: 0.9994 - val_loss: 0.0871 - val_accuracy: 0.9724 - val_auc: 0.9937
+Epoch 7/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0096 - accuracy: 0.9963 - auc: 0.9998 - val_loss: 0.1377 - val_accuracy: 0.9555 - val_auc: 0.9849
+/usr/local/lib/python3.11/dist-packages/sklearn/gaussian_process/kernels.py:445: ConvergenceWarning: The optimal value found for dimension 0 of parameter length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+
+Trial 17 Complete [03h 20m 57s]
+val_loss: 0.08709628880023956
+
+Best val_loss So Far: 0.08709628880023956
+Total elapsed time: 2d 06h 30m 33s
+
+Search: Running Trial #18
+
+Value             |Best Value So Far |Hyperparameter
+320               |304               |dense_1
+0.0028483         |0.00071031        |learning_rate
+0.91655           |0.91439           |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1736s 349ms/step - loss: 0.3696 - accuracy: 0.8265 - auc: 0.9145 - val_loss: 0.2426 - val_accuracy: 0.8942 - val_auc: 0.9680
+Epoch 2/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.1313 - accuracy: 0.9518 - auc: 0.9886 - val_loss: 0.2439 - val_accuracy: 0.9080 - val_auc: 0.9627
+Epoch 3/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0640 - accuracy: 0.9766 - auc: 0.9970 - val_loss: 0.3283 - val_accuracy: 0.8972 - val_auc: 0.9578
+Epoch 4/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.0427 - accuracy: 0.9849 - auc: 0.9987 - val_loss: 0.1788 - val_accuracy: 0.9356 - val_auc: 0.9800
+Epoch 5/7
+4952/4952 [==============================] - 1711s 346ms/step - loss: 0.0348 - accuracy: 0.9888 - auc: 0.9987 - val_loss: 0.2012 - val_accuracy: 0.9279 - val_auc: 0.9811
+Epoch 6/7
+4952/4952 [==============================] - 1712s 346ms/step - loss: 0.0311 - accuracy: 0.9904 - auc: 0.9988 - val_loss: 0.2716 - val_accuracy: 0.9018 - val_auc: 0.9714
+Epoch 7/7
+4952/4952 [==============================] - 1726s 348ms/step - loss: 0.0142 - accuracy: 0.9951 - auc: 0.9997 - val_loss: 0.1777 - val_accuracy: 0.9463 - val_auc: 0.9849
+/usr/local/lib/python3.11/dist-packages/sklearn/gaussian_process/kernels.py:445: ConvergenceWarning: The optimal value found for dimension 0 of parameter length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+
+Trial 18 Complete [03h 20m 38s]
+val_loss: 0.17768001556396484
+
+Best val_loss So Far: 0.08709628880023956
+Total elapsed time: 2d 09h 51m 11s
+
+Search: Running Trial #19
+
+Value             |Best Value So Far |Hyperparameter
+384               |304               |dense_1
+0.000379          |0.00071031        |learning_rate
+0.90056           |0.91439           |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1736s 349ms/step - loss: 0.4540 - accuracy: 0.7707 - auc: 0.8647 - val_loss: 0.2539 - val_accuracy: 0.9095 - val_auc: 0.9597
+Epoch 2/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.1291 - accuracy: 0.9528 - auc: 0.9892 - val_loss: 0.2443 - val_accuracy: 0.8988 - val_auc: 0.9703
+Epoch 3/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0654 - accuracy: 0.9776 - auc: 0.9970 - val_loss: 0.2721 - val_accuracy: 0.9049 - val_auc: 0.9673
+Epoch 4/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.0306 - accuracy: 0.9902 - auc: 0.9991 - val_loss: 0.1807 - val_accuracy: 0.9387 - val_auc: 0.9846
+Epoch 5/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0268 - accuracy: 0.9908 - auc: 0.9992 - val_loss: 0.2501 - val_accuracy: 0.9294 - val_auc: 0.9726
+Epoch 6/7
+4952/4952 [==============================] - 1713s 346ms/step - loss: 0.0188 - accuracy: 0.9944 - auc: 0.9996 - val_loss: 0.2356 - val_accuracy: 0.9340 - val_auc: 0.9770
+Epoch 7/7
+4952/4952 [==============================] - 1727s 349ms/step - loss: 0.0122 - accuracy: 0.9954 - auc: 0.9998 - val_loss: 0.1604 - val_accuracy: 0.9525 - val_auc: 0.9838
+/usr/local/lib/python3.11/dist-packages/sklearn/gaussian_process/kernels.py:445: ConvergenceWarning: The optimal value found for dimension 0 of parameter length_scale is close to the specified lower bound 1e-05. Decreasing the bound and calling fit again may find a better value.
+  warnings.warn(
+
+Trial 19 Complete [03h 21m 01s]
+val_loss: 0.16035650670528412
+
+Best val_loss So Far: 0.08709628880023956
+Total elapsed time: 2d 13h 12m 13s
+
+Search: Running Trial #20
+
+Value             |Best Value So Far |Hyperparameter
+400               |304               |dense_1
+0.00012549        |0.00071031        |learning_rate
+0.87631           |0.91439           |momentum
+True              |False             |nesterov
+
+Epoch 1/7
+4952/4952 [==============================] - 1737s 349ms/step - loss: 0.6015 - accuracy: 0.6639 - auc: 0.7339 - val_loss: 0.3843 - val_accuracy: 0.8359 - val_auc: 0.9179
+Epoch 2/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.3740 - accuracy: 0.8323 - auc: 0.9165 - val_loss: 0.2950 - val_accuracy: 0.8543 - val_auc: 0.9486
+Epoch 3/7
+4952/4952 [==============================] - 1726s 349ms/step - loss: 0.1724 - accuracy: 0.9347 - auc: 0.9829 - val_loss: 0.2175 - val_accuracy: 0.9049 - val_auc: 0.9722
+Epoch 4/7
+4952/4952 [==============================] - 1728s 349ms/step - loss: 0.0804 - accuracy: 0.9732 - auc: 0.9962 - val_loss: 0.1751 - val_accuracy: 0.9310 - val_auc: 0.9833
+Epoch 5/7
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0563 - accuracy: 0.9796 - auc: 0.9979 - val_loss: 0.2165 - val_accuracy: 0.9187 - val_auc: 0.9743
+Epoch 6/7
+4952/4952 [==============================] - 1726s 348ms/step - loss: 0.0363 - accuracy: 0.9876 - auc: 0.9991 - val_loss: 0.1435 - val_accuracy: 0.9509 - val_auc: 0.9872
+Epoch 7/7
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0202 - accuracy: 0.9943 - auc: 0.9998 - val_loss: 0.2151 - val_accuracy: 0.9310 - val_auc: 0.9804
+
+Trial 20 Complete [03h 21m 06s]
+val_loss: 0.1434875875711441
+
+Best val_loss So Far: 0.08709628880023956
+Total elapsed time: 2d 16h 33m 19s
+Epoch 1/15
+4952/4952 [==============================] - 1734s 349ms/step - loss: 0.3748 - accuracy: 0.8230 - auc: 0.9120 - val_loss: 0.1864 - val_accuracy: 0.9356 - val_auc: 0.9799
+Epoch 2/15
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.1076 - accuracy: 0.9610 - auc: 0.9921 - val_loss: 0.2613 - val_accuracy: 0.8988 - val_auc: 0.9662
+Epoch 3/15
+4952/4952 [==============================] - 1726s 348ms/step - loss: 0.0503 - accuracy: 0.9841 - auc: 0.9981 - val_loss: 0.1713 - val_accuracy: 0.9371 - val_auc: 0.9849
+Epoch 4/15
+4952/4952 [==============================] - 1725s 348ms/step - loss: 0.0379 - accuracy: 0.9861 - auc: 0.9990 - val_loss: 0.1606 - val_accuracy: 0.9417 - val_auc: 0.9845
+Epoch 5/15
+4952/4952 [==============================] - 1725s 348ms/step - loss: 0.0305 - accuracy: 0.9896 - auc: 0.9989 - val_loss: 0.1168 - val_accuracy: 0.9509 - val_auc: 0.9917
+Epoch 6/15
+4952/4952 [==============================] - 1725s 348ms/step - loss: 0.0122 - accuracy: 0.9967 - auc: 0.9995 - val_loss: 0.1098 - val_accuracy: 0.9663 - val_auc: 0.9931
+Epoch 7/15
+4952/4952 [==============================] - 1709s 345ms/step - loss: 0.0084 - accuracy: 0.9978 - auc: 0.9999 - val_loss: 0.1834 - val_accuracy: 0.9571 - val_auc: 0.9826
+Epoch 8/15
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0150 - accuracy: 0.9947 - auc: 0.9997 - val_loss: 0.1297 - val_accuracy: 0.9693 - val_auc: 0.9894
+Epoch 9/15
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0066 - accuracy: 0.9976 - auc: 0.9999 - val_loss: 0.1391 - val_accuracy: 0.9601 - val_auc: 0.9885
+Epoch 10/15
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0108 - accuracy: 0.9967 - auc: 0.9995 - val_loss: 0.1298 - val_accuracy: 0.9571 - val_auc: 0.9884
+Epoch 11/15
+4952/4952 [==============================] - 1711s 345ms/step - loss: 0.0067 - accuracy: 0.9985 - auc: 0.9999 - val_loss: 0.3325 - val_accuracy: 0.9310 - val_auc: 0.9640
+Epoch 12/15
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0036 - accuracy: 0.9989 - auc: 0.9999 - val_loss: 0.1300 - val_accuracy: 0.9632 - val_auc: 0.9897
+Epoch 13/15
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0040 - accuracy: 0.9989 - auc: 1.0000 - val_loss: 0.1159 - val_accuracy: 0.9739 - val_auc: 0.9876
+Epoch 14/15
+4952/4952 [==============================] - 1710s 345ms/step - loss: 0.0030 - accuracy: 0.9993 - auc: 0.9999 - val_loss: 0.1524 - val_accuracy: 0.9617 - val_auc: 0.9846
+Epoch 15/15
+4952/4952 [==============================] - 1710s 345ms/step - loss: 8.1284e-04 - accuracy: 0.9997 - auc: 1.0000 - val_loss: 0.1481 - val_accuracy: 0.9632 - val_auc: 0.9867
+259/259 [==============================] - 21s 81ms/step - loss: 0.0928 - accuracy: 0.9730 - auc: 0.9948
+259/259 [==============================] - 20s 79ms/step - loss: 0.0789 - accuracy: 0.9730 - auc: 0.9957

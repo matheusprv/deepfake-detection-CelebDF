@@ -1,0 +1,4 @@
+dense_1: 304
+learning_rate: 0.0007103089732495943
+momentum: 0.9143924269674935
+nesterov: False

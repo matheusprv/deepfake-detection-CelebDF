@@ -1,0 +1,1 @@
+The videos from test_fake.txt and test_real.txt were selected by copying the file "List_of_testing_videos.txt" from the provided dataset
