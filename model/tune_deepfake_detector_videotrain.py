@@ -26,9 +26,9 @@ from Training import model_training_and_evaluation
 
 #######################################################################################################
 
-train_generator = CustomDataGen(os.path.join(root_folder, 'train'), BATCH_SIZE, will_manipulate_video = False)
-val_generator = CustomDataGen(os.path.join(root_folder, 'val'), BATCH_SIZE, will_manipulate_video = False)
-test_generator = CustomDataGen(os.path.join(root_folder, 'test'), BATCH_SIZE, will_manipulate_video = False)
+train_generator = CustomDataGen(os.path.join(root_folder, 'train'), BATCH_SIZE)
+val_generator = CustomDataGen(os.path.join(root_folder, 'val'), BATCH_SIZE)
+test_generator = CustomDataGen(os.path.join(root_folder, 'test'), BATCH_SIZE)
 
 print("train:",train_generator.n)
 print("val:",val_generator.n)
@@ -45,7 +45,6 @@ def build_model(hp):
     x = TimeDistributed(base_model)(x)
     x = GlobalAveragePooling3D()(x)
     x = Dense(hp.Int(("dense_1"), min_value = 256, max_value = 400, step = 16), activation = 'relu')(x)
-    #x = Dense(hp.Int(("dense_2"), min_value = 32, max_value = 128, step = 16), activation = 'relu')(x)
     output = Dense(2, activation='softmax')(x)
 
     model = Model(inputs=input_layer, outputs=output)
